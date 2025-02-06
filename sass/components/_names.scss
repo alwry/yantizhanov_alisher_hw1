@@ -1,5 +1,9 @@
 @use '../abstracts/' as a;
 
+.names-ul {
+    margin-top: 20px;
+}
+
 .names-ul li {
     padding: 10px;
     transition: all .4s ease-out;

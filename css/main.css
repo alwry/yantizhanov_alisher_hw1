@@ -59,6 +59,10 @@ header {
   align-items: center;
 }
 
+.names-ul {
+  margin-top: 20px;
+}
+
 .names-ul li {
   padding: 10px;
   transition: all 0.4s ease-out;
@@ -124,4 +128,38 @@ footer {
 
 .info {
   margin-top: 50px;
+  border: 1px solid #FFE81F;
+  padding: 0px 20px 20px 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .welcome-text-wicon {
+    margin: 0;
+    align-items: end;
+  }
+  .welcome-text-wicon .p-reg {
+    text-align: right;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .welcome {
+    margin-top: 500px;
+  }
+  .selection {
+    margin-top: 100px;
+  }
+  .info {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0;
+  }
+  .info-div {
+    width: 50%;
+  }
+  .poster {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 20px;
+  }
 }
