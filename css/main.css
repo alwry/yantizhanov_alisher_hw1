@@ -1,0 +1,67 @@
+img, embed, object, video {
+  max-width: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  font-size: 15px;
+  font-weight: 200;
+  line-height: 1.3;
+  color: #fafafa;
+  margin: 0;
+  background-color: #121212;
+}
+
+.p-reg {
+  color: #FFE81F;
+  font-weight: 300;
+}
+
+header {
+  border-bottom: 1px solid #fafafa;
+  height: 70px;
+}
+
+.header-div {
+  height: 100%;
+}
+
+.header-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* CSS Document */
+.welcome {
+  margin-top: 50px;
+  height: 100vh;
+}
+
+#welcome-logo {
+  margin-bottom: 30px;
+}
+
+#welcome-desc {
+  margin-top: 20px;
+}
+
+.welcome-text-wicon {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin-top: 20px;
+}
+
+.arrow-icon {
+  width: 30px;
+  margin: 10px 0px;
+}
+
+#scroll {
+  width: 100%;
+}

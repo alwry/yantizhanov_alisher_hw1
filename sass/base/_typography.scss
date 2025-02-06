@@ -1,0 +1,6 @@
+@use '../abstracts/' as a;
+
+.p-reg {
+    color: a.$main-color;
+    font-weight: 300;
+}
