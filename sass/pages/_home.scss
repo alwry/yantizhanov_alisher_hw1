@@ -1,0 +1,39 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.welcome {
+	margin-top: 50px;
+	height: 100vh;
+}
+
+#welcome-logo {
+	margin-bottom: 30px;
+}
+#welcome-desc {
+	margin-top: 20px;
+}
+
+.welcome-text-wicon {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	margin-top: 20px;
+}
+
+.arrow-icon {
+	width: 30px;
+	margin: 10px 0px;
+}
+
+#scroll {
+	width: 100%;
+}
+@media screen and (min-width: 768px) {
+
+}
+
+@media screen and (min-width: 1200px) {
+
+	
+
+}
