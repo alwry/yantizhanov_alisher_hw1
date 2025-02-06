@@ -1,0 +1,13 @@
+@use '../abstracts/' as a;
+
+.names-ul li {
+    padding: 10px;
+    transition: all .4s ease-out;
+}
+
+.names-ul li:hover {
+    background-color: a.$main-color;
+    color: a.$main-bg;
+    font-weight: 600;
+    transition: all .4s ease-out;
+}
