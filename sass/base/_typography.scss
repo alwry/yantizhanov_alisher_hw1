@@ -4,3 +4,26 @@
     color: a.$main-color;
     font-weight: 300;
 }
+
+ul, li, a {
+    text-decoration: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.movie-title {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+.year {
+    font-size: 15px;
+    color: a.$main-color;
+}
+
+.info .p-reg {
+    margin-bottom: 10px;
+}
