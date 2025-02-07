@@ -1,14 +1,14 @@
 (()=>{
-    console.log('iife fired')
-
-
-
-    const title = document.querySelector('.movie-title')
     const baseUrl = 'https://swapi.dev/api/';
+    const imagesMap = {
+        "https://swapi.dev/api/films/1/": "img/poster-1.jpeg",
+        "https://swapi.dev/api/films/2/": "img/poster-2.jpg",
+        "https://swapi.dev/api/films/3/": "img/poster-3.jpg",
+        "https://swapi.dev/api/films/4/": "img/poster-4.jpg",
+        "https://swapi.dev/api/films/5/": "img/poster-5.jpg",
+        "https://swapi.dev/api/films/6/": "img/poster-6.jpg"
+    };
     
-
-    
-
     function getNames() {
         const loaderNames = document.querySelector('.list-div .loader');
         loaderNames.classList.toggle('hidden');
@@ -16,7 +16,7 @@
         .then(
             response => response.json())
         .then(function(response) {
-            console.log(response);
+
             
             const names = response.results;
             const ul = document.createElement("ul");
@@ -24,6 +24,7 @@
             names.forEach(name => {
                 const li = document.createElement("li");
                 const a = document.createElement("a");
+                
                 a.textContent = name["name"];
                 a.dataset.films = name["films"].join(' ');
                 li.appendChild(a);
@@ -50,7 +51,7 @@
 
     function getInfo(e) {
         e.preventDefault();
-        console.log("Review called")
+
         console.log(e.currentTarget.dataset.films);
         const films = e.currentTarget.dataset.films.split(' ');
         const infoBox = document.querySelector('.info-div');
@@ -60,13 +61,17 @@
             fetch(film)
             .then(response => response.json())
             .then(function(response) {
-                console.log(response.title);
-                console.log(response.release_date);
+
                 const heading = document.createElement('h2');
                 const span = document.createElement('span');
                 const preg = document.createElement('p');
+                const poster = document.createElement("img");
+
+                poster.src = imagesMap[film];
+                poster.classList.add('poster')
                 
                 preg.classList.add('p-reg');
+                preg.classList.add('scrollanim');
                 preg.textContent = response.opening_crawl;
 
                 span.classList.add('year');
@@ -78,12 +83,10 @@
                 heading.appendChild(span);
                 infoBox.appendChild(heading);
 
+                
                 infoBox.appendChild(preg);
+                infoBox.appendChild(poster);
 
-                // const clone = reviewTemplate.content.cloneNode(true);
-                // const reviewDescription = clone.querySelector(".review-description");
-                // reviewDescription.textContent = response.short.review.reviewBody;
-                // reviewCon.appendChild(clone);
             })
             .catch(function(err) {
                 console.log(err);
@@ -93,4 +96,34 @@
     }
 
 
+
+    gsap.registerPlugin(ScrollTrigger)
+
+    const welcomeLogo = document.querySelector('#welcome-logo')
+    const welcomeImg = document.querySelector('.welcome img')
+    const welcomeText = document.querySelectorAll('.welcgsap')
+
+    gsap.fromTo(welcomeLogo,
+        {opacity: 0, scale: 3}, {opacity: 1, scale: 1, duration: 1.4, ease: "power4.out"
+        });
+
+    gsap.fromTo(welcomeImg,
+        {y: 400, opacity: 0, scale: .4}, {y: 0, opacity: 1, scale: 1, duration: 1.4, ease: "power4.out"
+        });
+
+    welcomeText.forEach(parapgraph => {
+        gsap.set(parapgraph, {opacity: 0, scale: 4});
+        gsap.to(parapgraph, {
+            opacity: 1,
+            scale: 1,
+            ease: "power4.out",
+            scrollTrigger: {
+                trigger: welcomeImg,
+                start: 'top bottom',
+                end: 'bottom 60%',
+                scrub: true,
+
+            }
+        });
+    });    
 })();
