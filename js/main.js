@@ -65,7 +65,7 @@
                 const heading = document.createElement('h2');
                 const span = document.createElement('span');
                 const preg = document.createElement('p');
-                const poster = document.createElement("img");
+                const poster = document.createElement('img');
 
                 poster.src = imagesMap[film];
                 poster.classList.add('poster')
@@ -82,7 +82,6 @@
 
                 heading.appendChild(span);
                 infoBox.appendChild(heading);
-
                 
                 infoBox.appendChild(preg);
                 infoBox.appendChild(poster);
@@ -126,4 +125,5 @@
             }
         });
     });    
+
 })();
