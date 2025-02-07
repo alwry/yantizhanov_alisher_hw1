@@ -14,11 +14,12 @@ SWAPI is slow sometimes so please be patient. It could take up to a minute to lo
 
 ## Authors
 
-Design - Alisher
+Design - Niks
 HTML/CSS - Alisher
 JavaScript - Alisher
 Procrastination - Alisher
 [@alwry](https://github.com/alwry)
+[@nikmeijer](https://github.com/nikmeijer)
 
 
 ## License
