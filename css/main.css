@@ -35,6 +35,13 @@ ul, li, a {
   margin-top: 20px;
 }
 
+.name-title {
+  font-size: 15px;
+  font-weight: 400;
+  margin-top: 10px;
+  color: #FFE81F;
+}
+
 .year {
   font-size: 15px;
   color: #FFE81F;
