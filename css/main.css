@@ -38,6 +38,7 @@ ul, li, a {
 .year {
   font-size: 15px;
   color: #FFE81F;
+  margin-left: 10px;
 }
 
 .info .p-reg {
@@ -154,7 +155,7 @@ footer {
     margin: 0;
   }
   .info-div {
-    width: 50%;
+    width: 100%;
   }
   .poster {
     width: 50%;
